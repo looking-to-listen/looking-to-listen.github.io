@@ -1,1 +1,133 @@
-Coming soon....
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+Looking to Listen at the Cocktail Party:
+<br/>
+Audio-Visual Speech Separation
+</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65563403-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65563403-3');
+</script>
+</head>
+<body>
+<div class="container">
+  <p>&nbsp;</p>
+  <p><span class="title">Looking to Listen at the Cocktail Party:</span></p>
+  <p><span class="title">A Speaker-Independent Audio-Visual Model for Speech Separation</span> </p>
+  <table width="863" border="0" align="center" class="authors">
+    <tr align="center">
+      <td width="132"><a href="http://www.cs.huji.ac.il/~arielephrat/">Ariel Ephrat</a></td>
+      <td width="170"><a href="https://research.google.com/pubs/InbarMosseri.html">Inbar Mosseri</a></td>
+      <td width="172"><a href="mailto:oranl@google.com">Oran Lang</a></td>
+      <td width="174"><a href="http://people.csail.mit.edu/talidekel/">Tali Dekel</a></td>
+      <td width="170"><a href="https://research.google.com/pubs/KevinWilson.html">Kevin Wilson</a></td>
+    </tr>
+    <tr align="center">
+      <td></td>
+      <td><a href="http://u.cs.biu.ac.il/~avinatan/">Avinatan Hassidim</a></td>
+      <td><p><a href="https://billf.mit.edu/">William T. Freeman</a></p></td>
+      <td><a href="http://people.csail.mit.edu/mrub/" class="author">Michael Rubinstein</a></td>
+      <td></td>
+    </tr>
+  </table>
+  <table width="217" border="0" align="center" class="affiliations">
+    <tr>
+      <td align="center"><img src="images/logo_research.png" height="40" alt=""/></td>
+      <td align="left"><a href="https://research.google.com/">Google Research</a></td>
+    </tr>
+  </table>
+  <br />
+  <table width="200" border="0" align="center">
+    <tr>
+      <td><img src="images/teaser.jpg" width="950" alt=""/></td>
+    </tr>
+    <tr>
+      <td class="caption"><p>We present a model for isolating and enhancing the speech of desired speakers in a video. (a) The input is a video (frames + audio track) with one or more people speaking, where the speech of interest is interfered by other speakers and/or background noise. (b) Both audio and visual features are extracted and fed into a joint audio-visual speech separation model. The output is a decomposition of the input audio track into clean speech tracks, one for each person detected in the video (c). This allows us to then compose videos where speech of specific people is enhanced while all other sound is suppressed. Our model was trained using thousands of hours of video segments from our new dataset, AVSpeech, which we plan to release publicly.</p></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p><span class="section">Abstract</span> </p>
+  <p>We present a joint audio-visual model for isolating a single speech signal from a mixture of sounds such as other speakers and background noise. Solving this task using only audio as input is extremely challenging and does not provide an association of the separated speech signals with speakers in the video. In this paper, we present a deep network-based model that incorporates both visual and auditory signals to solve this task. The visual features are used to &quot;focus&quot; the audio on desired speakers in a scene and to improve the speech separation quality. To train our joint audio-visual model, we introduce AVSpeech, a new dataset comprised of thousands of hours of video segments from the Web. We demonstrate the applicability of our method to classic speech separation tasks, as well as real-world scenarios involving heated interviews, noisy bars, and screaming children, only requiring the user to specify the face of the person in the video whose speech they want to isolate. Our method shows clear advantage over state-of-the-art audio-only speech separation in cases of mixed speech. In addition, our model, which is speaker-independent (trained once, applicable to any speaker), produces better results than recent audio-visual speech separation methods that are speaker-dependent (require training a separate model for each speaker of interest).<br />
+  </p>
+  <p class="section">&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td><iframe aligh="center" width="853" height="480" src="https://www.youtube.com/embed/JbYw_oA-sm0" frameborder="0" allowfullscreen></iframe></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p class="section">Paper</p>
+  <table border="0">
+    <tbody>
+      <tr>
+        <td><img src="images/paper.jpg" alt="" width="155" height="200"/></td>
+        <td>&nbsp;</td>
+        <td><p>&quot;Looking to Listen at the Cocktail Party: A Speaker-Independent Audio-Visual Model for Speech Separation&quot;,<br />
+            Ariel Ephrat, Inbar Mosseri, Oran Lang, Tali Dekel, Kevin Wilson, Avinatan Hassidim, William T. Freeman and Michael Rubinstein<br />
+            arXiv preprint <a href="https://arxiv.org/abs/1804.03619">arXiv:1804.03619</a></p>
+        <p>[<a href="https://arxiv.org/pdf/1804.03619.pdf">PDF</a>]</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p class="section">Supplementary Material</p>
+  <table width="283" height="136" border="0">
+    <tbody>
+      <tr>
+        <td width="165"><a href="supplemental/index.html"><img src="images/supplemental.jpg" alt="" width="207" height="120"/></a></td>
+        <td width="6">&nbsp;</td>
+        <td width="56"><p>[<a href="supplemental/index.html">Link</a>]</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p><span class="section">AVSpeech Dataset</span></p>
+  <p>Coming soon...</p>
+  <p class="section">&nbsp;</p>
+  <!--
+  <p class="section">Google Research Blog</p>
+  <table width="1300" border="0">
+    <tbody>
+      <tr>
+        <td width="136"><img src="images/research_blog.png" width="200" height="131" alt=""/></td>
+        <td width="1048"><a href="https://research.googleblog.com/2017/08/making-visible-watermarks-more-effective.html"><img src="images/blog_post.png" width="300" height="166" alt=""/></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="section">Press</p>
+  <table border="0" cellpadding="10">
+    <tbody>
+      <tr>
+        <td><a href="https://www.theverge.com/2017/8/18/16162108/google-research-algorithm-watermark-removal-photo-protection"><img src="images/the_verge_2016_logo.png" width="200" height="37" alt=""/></a></td>
+        <td><a href="https://petapixel.com/2017/08/18/ai-can-easily-erase-photo-watermarks-heres-protect/"><img src="images/petapixel.png" width="200" height="50" alt=""/></a></td>
+        <td><a href="https://www.engadget.com/2017/08/18/google-flawlessly-remove-stock-photo-watermarks/"><img src="images/engadget.png" width="200" height="44" alt=""/></a></td>
+        <td><a href="https://www.wired.com/story/stock-photo-google-algorithm/"><img src="images/wired-logo.jpg" width="200" height="46" alt=""/></a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.dailymail.co.uk/sciencetech/article-4803562/Google-AI-easily-erase-watermarks-photos.html"><img src="images/dm_com_29.png" width="210" height="62" alt=""/></a></td>
+        <td><a href="https://thenextweb.com/google/2017/08/18/google-watermark-stock-photo-remove/"><img src="images/the_next_web_logo.jpg" width="190" height="100" alt=""/></a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="section">&nbsp;</p>
+  <p class="section">&nbsp;</p>
+  <p class="section">&nbsp;</p>
+-->
+  <p class="section">&nbsp;</p>
+  <p align="center" class="date">Last updated: April 2018</p>
+</div>
+</body>
+</html>

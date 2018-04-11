@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Looking to Listen at the Cocktail Party: A Speaker Independent Audio-Visual Model for Speech Separation Separation</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script> 
+function myAudVisFunc(seq, file) { 
+    document.getElementById(seq + "_src").src = "audio_visual/" + seq + "/" + file;
+    document.getElementById(seq + "_vid").load();
+	document.getElementById(seq + "_vid").play();
+}
+function myCaptionsFunc(seq, file) { 
+    document.getElementById(seq + "_trans_src").src = "captions/" + seq + "/" + file;
+    document.getElementById(seq + "_trans_vid").load();
+	document.getElementById(seq + "_trans_vid").play();
+} 
+function myHeatmapFunc(seq, file) { 
+    document.getElementById(seq + "_heatmap_src").src = "heatmaps/" + seq + "/" + file;
+    document.getElementById(seq + "_heatmap_vid").load();
+	document.getElementById(seq + "_heatmap_vid").play();
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+  <h1 align="center">Looking to Listen at the Cocktail Party:<br>A Speaker-Independent Audio-Visual Model for Speech Separation</h1>
+  <h2 align="center">Supplementary Material</h2>
+  <p align="center">&nbsp;</p>
+  <ul>
+    <li><a href="#speech_separation">Audio-Visual Speech Separation Results (Section 5, &quot;Real-World Speech Separation&quot;)</a></li>
+    <li><a href="#comparison_with_audio_only">Comparison with Audio-Only Speech Separation</a></li>
+    <li><a href="#captions">Automatic Video Transcription Results (Section 5, &quot;Application to Video Transcription&quot;)</a></li>
+    <li><a href="#comparison_with_audio_visual">Comparison with Audio-Visual Methods (Section 5, &quot;Comparison with Previous Work in Audio-Visual Speech Separation and Enhancement&quot;)</a></li>
+	<li><a href="#heatmaps_vis">Visualization of the Visual Contribution Per-Frame (Section 5, &quot;Additional Analysis&quot;)</a></li>
+    <li><a href="#dataset">Example video clips from our dataset (Section 3)</a></li>
+  </ul>
+  <p align="left">&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <h2 align="left"><a name="speech_separation" id="speech_separation"></a>Audio-Visual Speech Separation Results</h2>
+<p align="left">Click on the image thumbnails to see the corresponding source video ("Source") and our speech separation results ("Speaker A", "Speaker B", etc.).</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Stand-Up&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Speaker A</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Speaker B</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/stand_up/source.jpg" height="100" alt="" onclick="myAudVisFunc('stand_up','original.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/stand_up/jon_dore.jpg" height="100" alt="" onclick="myAudVisFunc('stand_up','jon_dore.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td><img src="audio_visual/stand_up/rory_scovel.jpg" height="100" alt="" onclick="myAudVisFunc('stand_up','rory_scovel.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="stand_up_vid" width="640" controls="controls">
+            <source id="stand_up_src" src="audio_visual/stand_up/original.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td>Video source: <a href="https://www.youtube.com/watch?v=UT7h4nRcWjU">Team Coco</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Sports Debate&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Speaker A</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Speaker B</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/espn/CGUpPyA48jE.jpg" height="100" alt="" onclick="myAudVisFunc('espn','CGUpPyA48jE_orig.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/espn/speaker1.jpg" height="100" alt="" onclick="myAudVisFunc('espn','CGUpPyA48jE_0.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td><img src="audio_visual/espn/speaker2.jpg" height="100" alt="" onclick="myAudVisFunc('espn','CGUpPyA48jE_1.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="espn_vid" width="640" controls="controls">
+            <source id="espn_src" src="audio_visual/espn/CGUpPyA48jE_orig.mp4" type="video/mp4" />
+          </video></td>
+      </tr>
+      <tr>
+        <td>Video source: <a href="https://www.youtube.com/watch?v=CGUpPyA48jE">ESPN</a><br />
+Your use of this footage is subject to Google's <a href="https://policies.google.com/terms">Terms of Service</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Double Obama&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Left Obama</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Right Obama</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/double_obama/source.jpg" height="100" alt="" onclick="myAudVisFunc('double_obama','original.mov')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/double_obama/obama1.jpg" height="100" alt="" onclick="myAudVisFunc('double_obama','obama1.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td align="center"><img src="audio_visual/double_obama/obama2.jpg" height="100" alt="" onclick="myAudVisFunc('double_obama','obama2.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="double_obama_vid" width="640" controls="controls">
+          <source id="double_obama_src" src="audio_visual/double_obama/original.mov"/>
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Double Sundar&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Left Sundar</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Right Sundar</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/double_sundar/original.png" height="100" alt="" onclick="myAudVisFunc('double_sundar','sundar_orig.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/double_sundar/left.png" height="100" alt="" onclick="myAudVisFunc('double_sundar','sundar_0.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td align="center"><img src="audio_visual/double_sundar/right.png" height="100" alt="" onclick="myAudVisFunc('double_sundar','sundar_1.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="double_sundar_vid" width="640" controls="controls">
+          <source id="double_sundar_src" src="audio_visual/double_sundar/sundar_orig.mp4"/>
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Undisputed Interview&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Speaker A</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Speaker B</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/undisputed/original.png" height="100" alt="" onclick="myAudVisFunc('undisputed','A-MOY7_Q3n0_orig.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/undisputed/speaker1.png" height="100" alt="" onclick="myAudVisFunc('undisputed','A-MOY7_Q3n0_speaker1.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td><img src="audio_visual/undisputed/speaker2.png" height="100" alt="" onclick="myAudVisFunc('undisputed','A-MOY7_Q3n0_speaker2.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="undisputed_vid" width="640" controls="controls">
+          <source id="undisputed_src" src="audio_visual/undisputed/A-MOY7_Q3n0_orig.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Cafeteria&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="25" align="center">&nbsp;</td>
+                <td align="center">Speaker</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/bill/bill.jpg" height="100" alt="" onclick="myAudVisFunc('bill','bill.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td align="center"><img src="audio_visual/bill/cropped.jpg" height="100" alt="" onclick="myAudVisFunc('bill','bill_clean.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="bill_vid" width="640" controls="controls">
+          <source id="bill_src" src="audio_visual/bill/bill.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Dubbing&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Speaker</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Dubbing</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/dubbing/source.jpg" height="100" alt="" onclick="myAudVisFunc('dubbing','xX64kcZW8cs_orig.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/dubbing/cropped.jpg" height="100" alt="" onclick="myAudVisFunc('dubbing','xX64kcZW8cs_0.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td><img src="audio_visual/dubbing/unknown.jpeg" height="100" alt="" onclick="myAudVisFunc('dubbing','xX64kcZW8cs_1.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="dubbing_vid" width="640" controls="controls">
+          <source id="dubbing_src" src="audio_visual/dubbing/xX64kcZW8cs_orig.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Video Conferencing&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Speaker A</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Speaker B</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/video_call/source.jpg" height="100" alt="" onclick="myAudVisFunc('video_call','orig.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/video_call/cropped_speaker_a.jpg" height="100" alt="" onclick="myAudVisFunc('video_call','only_ariel.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td><img src="audio_visual/video_call/cropped_speaker_b.jpg" height="100" alt="" onclick="myAudVisFunc('video_call','only_inbar.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="video_call_vid" width="640" controls="controls">
+          <source id="video_call_src" src="audio_visual/video_call/orig.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Car&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="25" align="center">&nbsp;</td>
+                <td align="center">Speaker</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/car/source.jpg" height="100" alt="" onclick="myAudVisFunc('car','original.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td align="center"><img src="audio_visual/car/inbar.jpg" height="100" alt="" onclick="myAudVisFunc('car','inbar.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="car_vid" width="640" controls="controls">
+          <source id="car_src" src="audio_visual/car/original.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+<p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Noisy Bar&quot;</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="25" align="center">&nbsp;</td>
+                <td align="center">Speaker</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/noisy_bar/source.jpg" height="100" alt="" onclick="myAudVisFunc('noisy_bar','original.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td align="center"><img src="audio_visual/noisy_bar/omri.jpg" height="100" alt="" onclick="myAudVisFunc('noisy_bar','omri.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="noisy_bar_vid" width="640" controls="controls">
+          <source id="noisy_bar_src" src="audio_visual/noisy_bar/original.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <hr />
+  <h2><a name="comparison_with_audio_only" id="comparison_with_audio_only"></a>Comparison With Audio-Only Speech Seperation</h2>
+  <p>We compare our audio-visual speech seperation results with those of a state-of-the-art audio-only model on a few of the sequences.</p>
+  <p>** Note that the audio-only model requires manually associating each separated audio track with a speaker in the video.</p>
+  <p>&nbsp;</p>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="3" align="center" valign="middle"><h2>&quot;Stand-Up&quot;</h2></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="audio_visual/stand_up/rory_scovel.jpg" height="80"/></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>Audio-only</strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><strong>Audio-visual (ours)</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><video width="320" id="noisy_bar_vid4" controls="controls" >
+          <source src="audio_only/stand_up/rory_scovel.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><video width="320" id="noisy_bar_vid5" controls="controls" >
+          <source src="audio_visual/stand_up/rory_scovel.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3">Notice: flipping back and forth between the speakers in audio-only, and how the audience laughter is better suppressed in our audio-visual result.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="3" align="center" valign="middle"><h2>&quot;Double Obama&quot;</h2></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="audio_visual/double_obama/obama1.jpg" height="80"/></td>
+      </tr>
+      <tr>
+        <td align="center"><strong>Audio-only</strong></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><strong>Audio-visual (ours)</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><video width="320" id="double_obama_vid4" controls="controls" >
+          <source src="audio_only/double_obama/only_left_obama.mp4" type="video/mp4" />
+        </video></td>
+        <td align="center">&nbsp;</td>
+        <td align="center"><video width="320" id="double_obama_vid5" controls="controls" >
+          <source src="audio_visual/double_obama/obama1.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="3">Notice: flipping back and forth between the right and left Obama in audio-only.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <h2 align="left"><a name="captions" id="captions"></a>Automatic Video Transcription Results</h2>
+  <p align="left">Click on the image thumbnails to see the corresponding YouTube auto-generated captions for the source video (with mixed speech) and for our speech separation results.</p>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Stand-Up&quot; Transcription</h2>
+          <table border="0" align="center">
+            <tbody>
+              <tr>
+                <td align="center">Source</td>
+                <td width="30" align="center">&nbsp;</td>
+                <td align="center">Speaker A</td>
+                <td width="10">&nbsp;</td>
+                <td align="center">Speaker B</td>
+              </tr>
+              <tr>
+                <td><img src="audio_visual/stand_up/source.jpg" height="100" alt="" onclick="myCaptionsFunc('stand_up','orig_sub.mp4')" style="cursor: pointer;"/></td>
+                <td>&nbsp;</td>
+                <td><img src="audio_visual/stand_up/jon_dore.jpg" height="100" alt="" onclick="myCaptionsFunc('stand_up','jon_dore_sub.mp4')" style="cursor: pointer;"/></td>
+                <td width="10">&nbsp;</td>
+                <td><img src="audio_visual/stand_up/rory_scovel.jpg" height="100" alt="" onclick="myCaptionsFunc('stand_up','rory_scovel_sub.mp4')" style="cursor: pointer;"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video id="stand_up_trans_vid" width="640" controls>
+          <source id="stand_up_trans_src" src="captions/stand_up/orig_sub.mp4" type="video/mp4">
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <h2><a name="comparison_with_audio_visual" id="comparison_with_audio_visual"></a>Comparison with Audio-Visual Methods</h2>
+  <p>We compare our audio-visual speech seperation model with recent audio-visual speech separation and enhancement methods.</p>
+  <p>&nbsp;</p>
+  <h3 style="color: #5DACFB">Comparison with [Hou et al. 2017, &quot;Audio-Visual Speech Enhancement based on Multimodal Deep Convolutional Neural Network&quot;] </h3>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center" valign="middle"><h2>Video #1</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Source</td>
+        <td align="center">&nbsp;</td>
+		<td align="center">Only the speaker, result by [Hou et al. 2017]</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">Only the speaker, our result</td>
+      </tr>
+      <tr>
+        <td><video width="320" id="hou_vid2" controls="controls" >
+          <source src="other_methods/hou/sp01_004.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+		<td><video width="320" id="hou_vid3" controls="controls" >
+          <source src="other_methods/hou/speaker01_004_hou.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="320" id="hou_vid4" controls="controls" >
+          <source src="other_methods/hou/speaker01_004_ours.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center" valign="middle"><h2>Video #2</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Source</td>
+        <td align="center">&nbsp;</td>
+		<td align="center">Only the speaker, result by [Hou et al. 2017]</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">Only the speaker, our result</td>
+      </tr>
+      <tr>
+        <td><video width="320" id="hou_vid5" controls="controls" >
+          <source src="other_methods/hou/sp01_008.mov" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+		<td><video width="320" id="hou_vid6" controls="controls" >
+          <source src="other_methods/hou/speaker01_008_hou.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="320" id="hou_vid7" controls="controls" >
+          <source src="other_methods/hou/speaker01_008_ours.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <h3 style="color:#5DACFB">Comparison with [Gabbay et al. 2017, &quot;Visual Speech Enhancement using Noise-Invariant Training&quot;] </h3>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center" valign="middle"><h2>Video #1</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Source</td>
+        <td align="center">&nbsp;</td>
+		<td align="center">Only the speaker, result by [Gabbay et al. 2017]</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">Only the speaker, our result</td>
+      </tr>
+      <tr>
+        <td><video width="320" id="gabbay_vid2" controls="controls" >
+          <source src="other_methods/gabbay/mixture.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+		<td><video width="320" id="gabbay_vid3" controls="controls" >
+          <source src="other_methods/gabbay/enhanced.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="320" id="gabbay_vid4" controls="controls" >
+          <source src="other_methods/gabbay/ours_0.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="650" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center" valign="middle"><h2>Video #2</h2></td>
+      </tr>
+      <tr>
+        <td align="center">Source</td>
+        <td align="center">&nbsp;</td>
+		<td align="center">Only the speaker, result by [Gabbay et al. 2017]</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">Only the speaker, our result</td>
+      </tr>
+      <tr>
+        <td><video width="320" id="gabbay_vid5" controls="controls" >
+          <source src="other_methods/gabbay/obama_trump.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+		<td><video width="320" id="gabbay_vid6" controls="controls" >
+          <source src="other_methods/gabbay/obama_trump_denoised.mp4" type="video/mp4" />
+        </video></td>
+        <td>&nbsp;</td>
+        <td><video width="320" id="_vid7" controls="controls" >
+          <source src="other_methods/gabbay/obama_trump_0.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+      <tr>
+        <td colspan="3">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <hr />
+  <p align="left">&nbsp;</p>
+  <h2 align="left"><a name="heatmaps_vis" id="heatmaps_vis"></a>Visualization of the Visual Contribution Per-Frame</h2>
+  <p align="left">To gain insights on how our model utilizes the visual signal, we generated heat maps per-frame that visualize the contribution of different regions in the input frames of several videos on our speech separation result, from blue (low contribution) to red (high contribution). </p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;TCD-TIMIT&quot;</h2>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video height="300" id="tcd-timit_heatmap_vid" width="640" controls="controls" poster="heatmaps/tcd-timit/image.png">
+          <source id="tcd-timit_heatmap_src" src="heatmaps/tcd-timit/output_snr_diff.mp4"/>
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Double Obama&quot;</h2>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video height="300" id="double_obama_heatmap_vid" width="640" controls="controls" poster="heatmaps/double_obama/image.png">
+          <source id="double_obama_heatmap_src" src="heatmaps/double_obama/output_right_snr_diff.mp4"/>
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="200" border="0" align="center">
+    <tbody>
+      <tr>
+        <td align="center"><h2>&quot;Standup&quot;</h2>
+          <br /></td>
+      </tr>
+      <tr>
+        <td><video height="300" id="standup_heatmap_vid" width="640" controls="controls" poster="heatmaps/standup/image.png">
+          <source id="standup_heatmap_src" src="heatmaps/standup/output_right_snr_diff.mp4"/>
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+<p align="left">Notice: As expected, the facial regions that contribute the most are located around the mouth, yet other areas such as the eyes and cheeks contribute as well.</p>
+  <p>&nbsp;</p>
+<hr />
+  <p align="left">&nbsp;</p>
+  <h2 align="left"><a name="dataset" id="dataset"></a>Example Video Clips from Our &quot;AVSpeech&quot; Dataset</h2>
+  <p align="left">We collected high-quality lecture videos from YouTube, then 
+    extracted from them
+    video segments with visible speakers and clean speech with no interfering 
+    sounds. Here we show a few examples of such videos, together with representative video segments we extracted from them (which comprise our dataset, and which we used to train our audio-visual speech separation model).</p>
+  <p align="left">For each example video, we first give a link to the (public) source video on YouTube, then show three representative video segments that our processing determined as containing a visible speaker and clean speech (see Section 3, &quot;Dataset creation pipeline&quot;). The provided  bounding boxes for speaker tracking are overlayed on the video frames.</p>
+  <table width="500" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=3DsHHfu4_co">https://www.youtube.com/watch?v=3DsHHfu4_co</a></h3></td>
+      </tr>
+      <tr>
+        <td align="center"> 00:00:14-00:00:17 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:00:46-00:00:49 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:00:49-00:00:52 </td>
+      </tr>
+      <tr>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/3DsHHfu4_co_14_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/3DsHHfu4_co_106_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/3DsHHfu4_co_109_.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="500" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=GzLqfm08oBI">https://www.youtube.com/watch?v=GzLqfm08oBI</a></h3></td>
+      </tr>
+      <tr>
+        <td align="center"> 00:01:30-00:01:33 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:01:33-00:01:36 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:01:49-00:01:52 </td>
+      </tr>
+      <tr>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/GzLqfm08oBI_90_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/GzLqfm08oBI_93_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/GzLqfm08oBI_109_.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="500" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=5JGS4NZrYpk">https://www.youtube.com/watch?v=5JGS4NZrYpk</a></h3></td>
+      </tr>
+      <tr>
+        <td align="center"> 00:03:40-00:03:43 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:03:43-00:03:46 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:06:49-00:06:52 </td>
+      </tr>
+      <tr>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/5JGS4NZrYpk_220_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/5JGS4NZrYpk_223_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/5JGS4NZrYpk_409_.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="500" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=FrKHP3yLjJw">https://www.youtube.com/watch?v=FrKHP3yLjJw</a></h3></td>
+      </tr>
+      <tr>
+        <td align="center"> 00:01:55-00:01:58 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:02:10-00:02:13 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:02:13-00:02:16 </td>
+      </tr>
+      <tr>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/FrKHP3yLjJw_115_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/FrKHP3yLjJw_130_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/FrKHP3yLjJw_133_.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="500" border="0" align="center">
+    <tbody>
+      <tr>
+        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=K84V0Tmdzzo">https://www.youtube.com/watch?v=K84V0Tmdzzo</a></h3></td>
+      </tr>
+      <tr>
+        <td align="center"> 00:00:17-00:00:20 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:02:03-00:02:06 </td>
+        <td width="5">&nbsp;</td>
+        <td align="center"> 00:02:39-00:02:39 </td>
+      </tr>
+      <tr>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/K84V0Tmdzzo_17_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/K84V0Tmdzzo_210_.mp4" type="video/mp4" />
+        </video></td>
+        <td width="5">&nbsp;</td>
+        <td><video width="250" controls="controls">
+          <source src="dataset_examples/K84V0Tmdzzo_243_.mp4" type="video/mp4" />
+        </video></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <h2 align="left">&nbsp;</h2>
+</div>
+</body>
+</html>
