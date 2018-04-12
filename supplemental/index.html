@@ -20,6 +20,12 @@ function myHeatmapFunc(seq, file) {
     document.getElementById(seq + "_heatmap_vid").load();
 	document.getElementById(seq + "_heatmap_vid").play();
 }
+function myEmbedFunc(seq, video_id) {
+    document.getElementById(seq + "_embed").src = "https://www.youtube.com/embed/" + video_id + "?rel=0&autoplay=1"
+    document.getElementById(seq + "_embed").load()
+    document.getElementById(seq + "_embed").play()
+}
+
 </script>
 </head>
 
@@ -48,27 +54,28 @@ function myHeatmapFunc(seq, file) {
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/stand_up/original.mp4" download="source"> Source </a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Speaker A</td>
+                <td align="center"><a href="audio_visual/stand_up/jon_dore.mp4" download="source">Speaker A</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Speaker B</td>
+                <td align="center"><a href="audio_visual/stand_up/rory_scovel.mp4" download="source">Speaker B</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/stand_up/source.jpg" height="100" alt="" onclick="myAudVisFunc('stand_up','original.mp4')" style="cursor: pointer;"/></td>
+                <td>
+                <img src="audio_visual/stand_up/source.jpg" height="100" alt="" onclick="myEmbedFunc('stand_up','iIbBMSn3QiY')" style="cursor: pointer;"/></a></td>                
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/stand_up/jon_dore.jpg" height="100" alt="" onclick="myAudVisFunc('stand_up','jon_dore.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/stand_up/jon_dore.jpg" height="100" alt="" onclick="myEmbedFunc('stand_up','-BSFc2p_J9Q')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td><img src="audio_visual/stand_up/rory_scovel.jpg" height="100" alt="" onclick="myAudVisFunc('stand_up','rory_scovel.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/stand_up/rory_scovel.jpg" height="100" alt="" onclick="myEmbedFunc('stand_up','nfuiD83vjDM')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="stand_up_vid" width="640" controls="controls">
-            <source id="stand_up_src" src="audio_visual/stand_up/original.mp4" type="video/mp4" />
-          </video></td>
+	<td>
+	<iframe id="stand_up_embed" width="560" height="315" src="https://www.youtube.com/embed/iIbBMSn3QiY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
       <tr>
         <td>Video source: <a href="https://www.youtube.com/watch?v=UT7h4nRcWjU">Team Coco</a></td>
@@ -83,27 +90,27 @@ function myHeatmapFunc(seq, file) {
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/espn/CGUpPyA48jE_orig.mp4" download="source">Source</a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Speaker A</td>
+                <td align="center"><a href="audio_visual/espn/CGUpPyA48jE_0.mp4" download="source">Speaker A</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Speaker B</td>
+                <td align="center"><a href="audio_visual/espn/CGUpPyA48jE_1.mp4" download="source">Speaker B</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/espn/CGUpPyA48jE.jpg" height="100" alt="" onclick="myAudVisFunc('espn','CGUpPyA48jE_orig.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/espn/CGUpPyA48jE.jpg" height="100" alt="" onclick="myEmbedFunc('espn','y5QjF0_GY0c')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/espn/speaker1.jpg" height="100" alt="" onclick="myAudVisFunc('espn','CGUpPyA48jE_0.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/espn/speaker1.jpg" height="100" alt="" onclick="myEmbedFunc('espn','hPoYw0s-w0Q')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td><img src="audio_visual/espn/speaker2.jpg" height="100" alt="" onclick="myAudVisFunc('espn','CGUpPyA48jE_1.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/espn/speaker2.jpg" height="100" alt="" onclick="myEmbedFunc('espn','DVHZ_8-8OVY')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="espn_vid" width="640" controls="controls">
-            <source id="espn_src" src="audio_visual/espn/CGUpPyA48jE_orig.mp4" type="video/mp4" />
-          </video></td>
+	<td>	
+	<iframe id="espn_embed" width="560" height="315" src="https://www.youtube.com/embed/y5QjF0_GY0c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
       <tr>
         <td>Video source: <a href="https://www.youtube.com/watch?v=CGUpPyA48jE">ESPN</a><br />
@@ -119,28 +126,28 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/double_obama/obama_orig.mp4" download="source">Source</a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Left Obama</td>
+                <td align="center"><a href="audio_visual/double_obama/obama1.mp4" download="source">Left Obama</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Right Obama</td>
+                <td align="center"><a href="audio_visual/double_obama/obama2.mp4" download="source">Right Obama</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/double_obama/source.jpg" height="100" alt="" onclick="myAudVisFunc('double_obama','original.mov')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/double_obama/source.jpg" height="100" alt="" onclick="myEmbedFunc('double_obama','WSWxAwjJIMY')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/double_obama/obama1.jpg" height="100" alt="" onclick="myAudVisFunc('double_obama','obama1.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/double_obama/obama1.jpg" height="100" alt="" onclick="myEmbedFunc('double_obama','0ZhLve68ns8')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td align="center"><img src="audio_visual/double_obama/obama2.jpg" height="100" alt="" onclick="myAudVisFunc('double_obama','obama2.mp4')" style="cursor: pointer;"/></td>
+                <td align="center"><img src="audio_visual/double_obama/obama2.jpg" height="100" alt="" onclick="myEmbedFunc('double_obama','1jP0iMsTGCA')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="double_obama_vid" width="640" controls="controls">
-          <source id="double_obama_src" src="audio_visual/double_obama/original.mov"/>
-        </video></td>
-      </tr>
+	<td>	
+	<iframe id="double_obama_embed" width="560" height="315" src="https://www.youtube.com/embed/WSWxAwjJIMY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
+       </tr>
     </tbody>
   </table>
   <p>&nbsp;</p>
@@ -151,27 +158,27 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/double_sundar/sundar_orig.mp4" download="source">Source</a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Left Sundar</td>
+                <td align="center"><a href="audio_visual/double_sundar/sundar_0.mp4" download="source">Left Sundar</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Right Sundar</td>
+                <td align="center"><a href="audio_visual/double_sundar/sundar_1.mp4" download="source">Right Sundar</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/double_sundar/original.png" height="100" alt="" onclick="myAudVisFunc('double_sundar','sundar_orig.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/double_sundar/original.png" height="100" alt="" onclick="myEmbedFunc('double_sundar','fWLOS60tCJM')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/double_sundar/left.png" height="100" alt="" onclick="myAudVisFunc('double_sundar','sundar_0.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/double_sundar/left.png" height="100" alt="" onclick="myEmbedFunc('double_sundar','zUjKisnE5Bc')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td align="center"><img src="audio_visual/double_sundar/right.png" height="100" alt="" onclick="myAudVisFunc('double_sundar','sundar_1.mp4')" style="cursor: pointer;"/></td>
+                <td align="center"><img src="audio_visual/double_sundar/right.png" height="100" alt="" onclick="myEmbedFunc('double_sundar','BQ1cq6hhMog')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="double_sundar_vid" width="640" controls="controls">
-          <source id="double_sundar_src" src="audio_visual/double_sundar/sundar_orig.mp4"/>
-        </video></td>
+	<td>	
+	<iframe id="double_sundar_embed" width="560" height="315" src="https://www.youtube.com/embed/fWLOS60tCJM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -183,27 +190,27 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/undisputed/A-MOY7_Q3n0_orig.mp4" download="source">Source</a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Speaker A</td>
+                <td align="center"><a href="audio_visual/undisputed/'A-MOY7_Q3n0_speaker1.mp4" download="source">Speaker A</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Speaker B</td>
+                <td align="center"><a href="audio_visual/undisputed/'A-MOY7_Q3n0_speaker2.mp4" download="source">Speaker B</a></td> 
               </tr>
               <tr>
-                <td><img src="audio_visual/undisputed/original.png" height="100" alt="" onclick="myAudVisFunc('undisputed','A-MOY7_Q3n0_orig.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/undisputed/original.png" height="100" alt="" onclick="myEmbedFunc('undisputed','9YJJYv8MY0k')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/undisputed/speaker1.png" height="100" alt="" onclick="myAudVisFunc('undisputed','A-MOY7_Q3n0_speaker1.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/undisputed/speaker1.png" height="100" alt="" onclick="myEmbedFunc('undisputed','QfoMtPxDt3g')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td><img src="audio_visual/undisputed/speaker2.png" height="100" alt="" onclick="myAudVisFunc('undisputed','A-MOY7_Q3n0_speaker2.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/undisputed/speaker2.png" height="100" alt="" onclick="myEmbedFunc('undisputed','05R9vy61hdE')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="undisputed_vid" width="640" controls="controls">
-          <source id="undisputed_src" src="audio_visual/undisputed/A-MOY7_Q3n0_orig.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="undisputed_embed" width="560" height="315" src="https://www.youtube.com/embed/9YJJYv8MY0k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -215,23 +222,23 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/bill/bill.mp4" download="source">Source</a></td>
                 <td width="25" align="center">&nbsp;</td>
-                <td align="center">Speaker</td>
+                <td align="center"><a href="audio_visual/bill/bill_clean.mp4" download="source">Speaker</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/bill/bill.jpg" height="100" alt="" onclick="myAudVisFunc('bill','bill.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/bill/bill.jpg" height="100" alt="" onclick="myEmbedFunc('bill','VCmm7EAChjg')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td align="center"><img src="audio_visual/bill/cropped.jpg" height="100" alt="" onclick="myAudVisFunc('bill','bill_clean.mp4')" style="cursor: pointer;"/></td>
+                <td align="center"><img src="audio_visual/bill/cropped.jpg" height="100" alt="" onclick="myEmbedFunc('bill','2wFHXZ0_Wc8')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="bill_vid" width="640" controls="controls">
-          <source id="bill_src" src="audio_visual/bill/bill.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="bill_embed" width="560" height="315" src="https://www.youtube.com/embed/VCmm7EAChjg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -243,27 +250,27 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/dubbing/A-xX64kcZW8cs_orig.mp4" download="source">Source</a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Speaker</td>
+                <td align="center"><a href="audio_visual/dubbing/'A-xX64kcZW8cs_0.mp4" download="source">Speaker</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Dubbing</td>
+                <td align="center"><a href="audio_visual/dubbing/'A-xX64kcZW8cs_1.mp4" download="source">Dubbing</a></td> 
               </tr>
               <tr>
-                <td><img src="audio_visual/dubbing/source.jpg" height="100" alt="" onclick="myAudVisFunc('dubbing','xX64kcZW8cs_orig.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/dubbing/source.jpg" height="100" alt="" onclick="myEmbedFunc('dubbing','fUTqryLyJCc.mp4')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/dubbing/cropped.jpg" height="100" alt="" onclick="myAudVisFunc('dubbing','xX64kcZW8cs_0.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/dubbing/cropped.jpg" height="100" alt="" onclick="myEmbedFunc('dubbing','XzqIvPYm7BQ')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td><img src="audio_visual/dubbing/unknown.jpeg" height="100" alt="" onclick="myAudVisFunc('dubbing','xX64kcZW8cs_1.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/dubbing/unknown.jpeg" height="100" alt="" onclick="myEmbedFunc('dubbing','aFciHttc6Ys')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="dubbing_vid" width="640" controls="controls">
-          <source id="dubbing_src" src="audio_visual/dubbing/xX64kcZW8cs_orig.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="dubbing_embed" width="560" height="315" src="https://www.youtube.com/embed/fUTqryLyJCc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -275,27 +282,27 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/video_call/orig.mp4" download="source">Source</a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Speaker A</td>
+                <td align="center"><a href="audio_visual/video_call/only_ariel.mp4" download="source">Speaker A</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Speaker B</td>
+                <td align="center"><a href="audio_visual/video_call/only_inbar.mp4" download="source">Speaker B</a></td> 
               </tr>
               <tr>
-                <td><img src="audio_visual/video_call/source.jpg" height="100" alt="" onclick="myAudVisFunc('video_call','orig.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/video_call/source.jpg" height="100" alt="" onclick="myEmbedFunc('video_call','8KKu-bBEmoo')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/video_call/cropped_speaker_a.jpg" height="100" alt="" onclick="myAudVisFunc('video_call','only_ariel.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/video_call/cropped_speaker_a.jpg" height="100" alt="" onclick="myEmbedFunc('video_call','oFqBFo8_V70')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td><img src="audio_visual/video_call/cropped_speaker_b.jpg" height="100" alt="" onclick="myAudVisFunc('video_call','only_inbar.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/video_call/cropped_speaker_b.jpg" height="100" alt="" onclick="myEmbedFunc('video_call','7gEJQNRw-JI')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="video_call_vid" width="640" controls="controls">
-          <source id="video_call_src" src="audio_visual/video_call/orig.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="video_call_embed" width="560" height="315" src="https://www.youtube.com/embed/8KKu-bBEmoo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -307,23 +314,23 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/car/original.mp4" download="source">Source</a></td>
                 <td width="25" align="center">&nbsp;</td>
-                <td align="center">Speaker</td>
+                <td align="center"><a href="audio_visual/car/inbar.mp4" download="source">Speaker</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/car/source.jpg" height="100" alt="" onclick="myAudVisFunc('car','original.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/car/source.jpg" height="100" alt="" onclick="myEmbedFunc('car','mhTa9sDtt-g')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td align="center"><img src="audio_visual/car/inbar.jpg" height="100" alt="" onclick="myAudVisFunc('car','inbar.mp4')" style="cursor: pointer;"/></td>
+                <td align="center"><img src="audio_visual/car/inbar.jpg" height="100" alt="" onclick="myEmbedFunc('car','2UlXUKVkGf4')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="car_vid" width="640" controls="controls">
-          <source id="car_src" src="audio_visual/car/original.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="car_embed" width="560" height="315" src="https://www.youtube.com/embed/mhTa9sDtt-g?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -335,23 +342,23 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="audio_visual/noisy_bar/original.mp4" download="source">Source</a></td>
                 <td width="25" align="center">&nbsp;</td>
-                <td align="center">Speaker</td>
+                <td align="center"><a href="audio_visual/noisy_bar/omri.mp4" download="source">Speaker</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/noisy_bar/source.jpg" height="100" alt="" onclick="myAudVisFunc('noisy_bar','original.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/noisy_bar/source.jpg" height="100" alt="" onclick="myEmbedFunc('noisy_bar','D3Ht8THAQgw')" style="cursor: pointer;"/></td>
                 <td>&nbsp;</td>
-                <td align="center"><img src="audio_visual/noisy_bar/omri.jpg" height="100" alt="" onclick="myAudVisFunc('noisy_bar','omri.mp4')" style="cursor: pointer;"/></td>
+                <td align="center"><img src="audio_visual/noisy_bar/omri.jpg" height="100" alt="" onclick="myEmbedFunc('noisy_bar','ZZ8DKEQ9yNY')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="noisy_bar_vid" width="640" controls="controls">
-          <source id="noisy_bar_src" src="audio_visual/noisy_bar/original.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="noisy_bar_embed" width="560" height="315" src="https://www.youtube.com/embed/D3Ht8THAQgw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -371,18 +378,18 @@ Your use of this footage is subject to Google's <a href="https://policies.google
         <td colspan="3" align="center"><img src="audio_visual/stand_up/rory_scovel.jpg" height="80"/></td>
       </tr>
       <tr>
-        <td align="center"><strong>Audio-only</strong></td>
+        <td align="center"><a href="audio_only/stand_up/rory_scovel.mp4" download="source"><strong>Audio-only</strong></a></td>
         <td align="center">&nbsp;</td>
-        <td align="center"><strong>Audio-visual (ours)</strong></td>
+        <td align="center"><a href="audio_visual/stand_up/rory_scovel.mp4" download="source"><strong>Audio-visual (ours)</strong></td>
       </tr>
       <tr>
-        <td align="center"><video width="320" id="noisy_bar_vid4" controls="controls" >
-          <source src="audio_only/stand_up/rory_scovel.mp4" type="video/mp4" />
-        </video></td>
+	<td>
+	<iframe id="rory_scovel_audio_only" width="320" src="https://www.youtube.com/embed/UX4XxGnn6Yc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
         <td align="center">&nbsp;</td>
-        <td align="center"><video width="320" id="noisy_bar_vid5" controls="controls" >
-          <source src="audio_visual/stand_up/rory_scovel.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="rory_scovel_audio_visual" width="320" src="https://www.youtube.com/embed/nfuiD83vjDM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
       <tr>
         <td colspan="3">&nbsp;</td>
@@ -402,18 +409,18 @@ Your use of this footage is subject to Google's <a href="https://policies.google
         <td colspan="3" align="center"><img src="audio_visual/double_obama/obama1.jpg" height="80"/></td>
       </tr>
       <tr>
-        <td align="center"><strong>Audio-only</strong></td>
+        <td align="center"><a href="audio_only/double_obama/only_left_obama.mp4" download="source"><strong>Audio-only</strong></a></td>
         <td align="center">&nbsp;</td>
-        <td align="center"><strong>Audio-visual (ours)</strong></td>
+        <td align="center"><a href="audio_visual/double_obama/obama1.mp4" download="source"><strong>Audio-visual (ours)</strong></td>
       </tr>
       <tr>
-        <td align="center"><video width="320" id="double_obama_vid4" controls="controls" >
-          <source src="audio_only/double_obama/only_left_obama.mp4" type="video/mp4" />
-        </video></td>
+	<td>
+	<iframe id="left_obama_audio_only" width="280" src="https://www.youtube.com/embed/tsc0T3Ph-JM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
         <td align="center">&nbsp;</td>
-        <td align="center"><video width="320" id="double_obama_vid5" controls="controls" >
-          <source src="audio_visual/double_obama/obama1.mp4" type="video/mp4" />
-        </video></td>
+	<td>	
+	<iframe id="left_obama_audio_visual" width="280" src="https://www.youtube.com/embed/0ZhLve68ns8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
       <tr>
         <td colspan="3">&nbsp;</td>
@@ -437,27 +444,28 @@ Your use of this footage is subject to Google's <a href="https://policies.google
           <table border="0" align="center">
             <tbody>
               <tr>
-                <td align="center">Source</td>
+                <td align="center"><a href="captions/stand_up/original.mp4" download="source"> Source </a></td>
                 <td width="30" align="center">&nbsp;</td>
-                <td align="center">Speaker A</td>
+                <td align="center"><a href="captions/stand_up/jon_dore.mp4" download="source">Speaker A</a></td>
                 <td width="10">&nbsp;</td>
-                <td align="center">Speaker B</td>
+                <td align="center"><a href="captions/stand_up/rory_scovel.mp4" download="source">Speaker B</a></td>
               </tr>
               <tr>
-                <td><img src="audio_visual/stand_up/source.jpg" height="100" alt="" onclick="myCaptionsFunc('stand_up','orig_sub.mp4')" style="cursor: pointer;"/></td>
+                <td>
+                <img src="audio_visual/stand_up/source.jpg" height="100" alt="" onclick="myEmbedFunc('stand_up_trans','t9qrtJuMvww')" style="cursor: pointer;"/></a></td>                
                 <td>&nbsp;</td>
-                <td><img src="audio_visual/stand_up/jon_dore.jpg" height="100" alt="" onclick="myCaptionsFunc('stand_up','jon_dore_sub.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/stand_up/jon_dore.jpg" height="100" alt="" onclick="myEmbedFunc('stand_up_trans','gyZmOwJlOBc')" style="cursor: pointer;"/></td>
                 <td width="10">&nbsp;</td>
-                <td><img src="audio_visual/stand_up/rory_scovel.jpg" height="100" alt="" onclick="myCaptionsFunc('stand_up','rory_scovel_sub.mp4')" style="cursor: pointer;"/></td>
+                <td><img src="audio_visual/stand_up/rory_scovel.jpg" height="100" alt="" onclick="myEmbedFunc('stand_up_trans','kgrs6EmZwlk')" style="cursor: pointer;"/></td>
               </tr>
             </tbody>
           </table>
           <br /></td>
       </tr>
       <tr>
-        <td><video id="stand_up_trans_vid" width="640" controls>
-          <source id="stand_up_trans_src" src="captions/stand_up/orig_sub.mp4" type="video/mp4">
-        </video></td>
+	<td>	
+	<iframe id="stand_up_trans_embed" width="560" height="315" src="https://www.youtube.com/embed/t9qrtJuMvww?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -601,13 +609,13 @@ Your use of this footage is subject to Google's <a href="https://policies.google
   <table width="200" border="0" align="center">
     <tbody>
       <tr>
-        <td align="center"><h2>&quot;TCD-TIMIT&quot;</h2>
+        <td align="center"><a href="heatmaps/tcd-timit/output_snr_diff.mp4" download="source"><h2>&quot;TCD-TIMIT&quot;</h2></a>
           <br /></td>
       </tr>
       <tr>
-        <td><video height="300" id="tcd-timit_heatmap_vid" width="640" controls="controls" poster="heatmaps/tcd-timit/image.png">
-          <source id="tcd-timit_heatmap_src" src="heatmaps/tcd-timit/output_snr_diff.mp4"/>
-        </video></td>
+	<td>	
+	<iframe id="tcd_timit_heatmaps" width="560" height="315" src="https://www.youtube.com/embed/JuWVhhDzoUA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -615,13 +623,13 @@ Your use of this footage is subject to Google's <a href="https://policies.google
   <table width="200" border="0" align="center">
     <tbody>
       <tr>
-        <td align="center"><h2>&quot;Double Obama&quot;</h2>
+        <td align="center"><a href="heatmaps/double_obama/output_right_snr_diff.mp4" download="source"><h2>&quot;Double Obama&quot;</h2></a>
           <br /></td>
       </tr>
       <tr>
-        <td><video height="300" id="double_obama_heatmap_vid" width="640" controls="controls" poster="heatmaps/double_obama/image.png">
-          <source id="double_obama_heatmap_src" src="heatmaps/double_obama/output_right_snr_diff.mp4"/>
-        </video></td>
+	<td>	
+	<iframe id="double_obama_heatmaps" width="560" height="315" src="https://www.youtube.com/embed/MhjHdHtlBK8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -629,13 +637,13 @@ Your use of this footage is subject to Google's <a href="https://policies.google
   <table width="200" border="0" align="center">
     <tbody>
       <tr>
-        <td align="center"><h2>&quot;Standup&quot;</h2>
+        <td align="center"><a href="heatmaps/standup/output_right_snr_diff.mp4" download="source"><h2>&quot;Standup&quot;</h2></a>
           <br /></td>
       </tr>
       <tr>
-        <td><video height="300" id="standup_heatmap_vid" width="640" controls="controls" poster="heatmaps/standup/image.png">
-          <source id="standup_heatmap_src" src="heatmaps/standup/output_right_snr_diff.mp4"/>
-        </video></td>
+	<td>	
+	<iframe id="standup_heatmaps" width="560" height="315" src="https://www.youtube.com/embed/aMT6ZNOlt44?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</td>
       </tr>
     </tbody>
   </table>
@@ -644,152 +652,6 @@ Your use of this footage is subject to Google's <a href="https://policies.google
   <p>&nbsp;</p>
 <hr />
   <p align="left">&nbsp;</p>
-  <h2 align="left"><a name="dataset" id="dataset"></a>Example Video Clips from Our &quot;AVSpeech&quot; Dataset</h2>
-  <p align="left">We collected high-quality lecture videos from YouTube, then 
-    extracted from them
-    video segments with visible speakers and clean speech with no interfering 
-    sounds. Here we show a few examples of such videos, together with representative video segments we extracted from them (which comprise our dataset, and which we used to train our audio-visual speech separation model).</p>
-  <p align="left">For each example video, we first give a link to the (public) source video on YouTube, then show three representative video segments that our processing determined as containing a visible speaker and clean speech (see Section 3, &quot;Dataset creation pipeline&quot;). The provided  bounding boxes for speaker tracking are overlayed on the video frames.</p>
-  <table width="500" border="0" align="center">
-    <tbody>
-      <tr>
-        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=3DsHHfu4_co">https://www.youtube.com/watch?v=3DsHHfu4_co</a></h3></td>
-      </tr>
-      <tr>
-        <td align="center"> 00:00:14-00:00:17 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:00:46-00:00:49 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:00:49-00:00:52 </td>
-      </tr>
-      <tr>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/3DsHHfu4_co_14_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/3DsHHfu4_co_106_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/3DsHHfu4_co_109_.mp4" type="video/mp4" />
-        </video></td>
-      </tr>
-    </tbody>
-  </table>
-  <p>&nbsp;</p>
-  <table width="500" border="0" align="center">
-    <tbody>
-      <tr>
-        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=GzLqfm08oBI">https://www.youtube.com/watch?v=GzLqfm08oBI</a></h3></td>
-      </tr>
-      <tr>
-        <td align="center"> 00:01:30-00:01:33 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:01:33-00:01:36 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:01:49-00:01:52 </td>
-      </tr>
-      <tr>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/GzLqfm08oBI_90_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/GzLqfm08oBI_93_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/GzLqfm08oBI_109_.mp4" type="video/mp4" />
-        </video></td>
-      </tr>
-    </tbody>
-  </table>
-  <p>&nbsp;</p>
-  <table width="500" border="0" align="center">
-    <tbody>
-      <tr>
-        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=5JGS4NZrYpk">https://www.youtube.com/watch?v=5JGS4NZrYpk</a></h3></td>
-      </tr>
-      <tr>
-        <td align="center"> 00:03:40-00:03:43 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:03:43-00:03:46 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:06:49-00:06:52 </td>
-      </tr>
-      <tr>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/5JGS4NZrYpk_220_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/5JGS4NZrYpk_223_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/5JGS4NZrYpk_409_.mp4" type="video/mp4" />
-        </video></td>
-      </tr>
-    </tbody>
-  </table>
-  <p>&nbsp;</p>
-  <table width="500" border="0" align="center">
-    <tbody>
-      <tr>
-        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=FrKHP3yLjJw">https://www.youtube.com/watch?v=FrKHP3yLjJw</a></h3></td>
-      </tr>
-      <tr>
-        <td align="center"> 00:01:55-00:01:58 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:02:10-00:02:13 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:02:13-00:02:16 </td>
-      </tr>
-      <tr>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/FrKHP3yLjJw_115_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/FrKHP3yLjJw_130_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/FrKHP3yLjJw_133_.mp4" type="video/mp4" />
-        </video></td>
-      </tr>
-    </tbody>
-  </table>
-  <p>&nbsp;</p>
-  <table width="500" border="0" align="center">
-    <tbody>
-      <tr>
-        <td colspan="5" align="center"><h3>Source video: <a href="https://www.youtube.com/watch?v=K84V0Tmdzzo">https://www.youtube.com/watch?v=K84V0Tmdzzo</a></h3></td>
-      </tr>
-      <tr>
-        <td align="center"> 00:00:17-00:00:20 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:02:03-00:02:06 </td>
-        <td width="5">&nbsp;</td>
-        <td align="center"> 00:02:39-00:02:39 </td>
-      </tr>
-      <tr>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/K84V0Tmdzzo_17_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/K84V0Tmdzzo_210_.mp4" type="video/mp4" />
-        </video></td>
-        <td width="5">&nbsp;</td>
-        <td><video width="250" controls="controls">
-          <source src="dataset_examples/K84V0Tmdzzo_243_.mp4" type="video/mp4" />
-        </video></td>
-      </tr>
-    </tbody>
-  </table>
-  <p>&nbsp;</p>
   <h2 align="left">&nbsp;</h2>
 </div>
 </body>
