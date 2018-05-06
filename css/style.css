@@ -10,6 +10,7 @@ body {
 .container {
 	width: 1000px;
 	min-height: 1000px;
+	max-height: 999999px; /* prevents font boosting */
 	margin: 0 auto; /* top and bottom, right and left */
 	/*	border: 1px solid #000; */
 	text-align: left; /* top, right, bottom, left */
