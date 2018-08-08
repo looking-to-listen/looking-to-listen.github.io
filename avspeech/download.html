@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+<link rel="stylesheet" href="resources/style.css">
+<title>AVSpeech: Audio Visual Speech dataset</title>
+<!-- Top  -->
+<div class="top">
+  <table>
+    <tr>
+      <td class="top-left"><span class="top-8m-text">AVSpeech</span></td>
+      <td class="top-right"><a href="index.html">HOME</a> <a href="explore.html">EXPLORE</a> <a href="download.html">DOWNLOAD</a> <a href="people.html">TEAM</a></td>
+    </tr>
+  </table>
+</div>
+<div class="contents">
+  <div class="page">
+    <h2>The dataset</h2>
+    <div class="pc">
+      <p> We provide two csv files for download: <br>
+      <ul>
+        <li><a href="https://storage.cloud.google.com/avspeech-files/avspeech_train.csv"
+                 download="train.csv"
+                 onclick="ga('send', 'event', 'Files', 'click', 'train')">train.csv</a> <i>(128MB)</i> - A set of video segment annotations from 270k videos.</li>
+        <li><a href="https://storage.cloud.google.com/avspeech-files/avspeech_test.csv"
+                 download="test.csv"
+                 onclick="ga('send', 'event', 'Files', 'click', 'test')">test.csv</a> <i>(9MB)</i> - A set of video segment annotations from a separate set of 22k videos.</li>
+      </ul>
+      <p> The format of the csv files is as following:
+      <pre>
+        YouTube ID, start segment, end segment, X coordinate, Y coordinate
+	</pre>
+      Where the X,Y coordinates mark the center point of the speaker's face in the frame at the beginning of the segment, 
+      normalized with respect to frame size, where (0.0, 0.0) corresponds to the top left, and (1.0, 1.0) corresponds to bottom right. <br>
+    </div>
+    <div class="pc"> If you plan to use this dataset, please cite our <a href=https://arxiv.org/abs/1804.03619>paper</a>.
+      <p>
+      
+      <pre>
+@article{ephrat2018looking,
+  title={Looking to listen at the cocktail party: A speaker-independent audio-visual model for speech separation},
+  author={Ephrat, A. and Mosseri, I. and Lang, O. and Dekel, T. and Wilson, K and Hassidim, A. and Freeman, W. T. and Rubinstein, M.},
+  journal={arXiv preprint arXiv:1804.03619},
+  year={2018}
+}</pre>
+      </p>
+    </div>
+  </div>
+  <div class="page">
+    <h2>Separation of speech and noise</h2>
+    <div class="pc"> To create the speech + noise mixtures, we used samples from <a href="https://research.google.com/audioset/">AudioSet</a> as the non-speech sounds. These sounds were taken randomly from videos which were not given the "Speech" label. Different
+      sets of videos were taken for the train and test set. </div>
+  </div>
+  <div class="page">This data is licensed by Google LLC under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.</a> </div>
+</div>
+<!-- end of contents -->
+<div class="tos">
+  <table>
+    <tr>
+      <td><img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_dark_color_42x16dp.png" alt="Google"></td>
+      <td class="tos-right"><a href="https://www.google.com/">Google</a> <a href="https://www.google.com/intl/en/about/">About Google</a> <a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a> <a href="https://www.google.com/intl/en/policies/terms/">Terms</a> <a href="https://groups.google.com/forum/#!forum/cartoonset-users">Feedback</a></td>
+    </tr>
+  </table>
+</div>

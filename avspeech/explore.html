@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="resources/style.css">
+<link rel="stylesheet" href="resources/style2.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="resources/main.js"></script>
+<title>AVSpeech: Audio Visual Speech dataset</title>
+<!-- Top  -->
+<div class="top">
+  <table>
+    <tr>
+      <td class="top-left">
+      <span class="top-8m-text">AVSpeech</span></td>
+      <td class="top-right">
+        <a href="index.html">HOME</a>
+        <a href="explore.html">EXPLORE</a>
+        <a href="download.html">DOWNLOAD</a>
+        <a href="people.html">TEAM</a>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="contents">
+<div class="page">
+  <table border="0">
+      <tr>
+        <td><p>The AVSpeech dataset is a large collection of video clips of single speakers talking with no audio background interference. The dataset is based on public instructional YouTube videos (talks, lectures, HOW-TOs), from which we automatically extracted short, 3-10 second clips, where the only visible face in the video and audible sound in the soundtrack belong to a single speaking person. Below is a &quot;small&quot; sample of 10,000 clips from the dataset. If you click on a video you will see just a segment from the video on YouTube that is included in the dataset. <br>
+You can learn more about the dataset construction in our <a href="https://arxiv.org/abs/1804.03619">SIGGRAPH 2018 paper</a>. </p></td>
+      </tr>
+  </table>
+</div>
+<div id="youtube_modal" class="h"></div>
+<div class="W">
+<div id="thumbnails" class="thumbnail_container">
+</div>
+</div>
+<script>populateThumbnails('./', 'data',  10000 );</script>
+</div>
+<!-- end of contents -->
+<div class="tos">
+  <table>
+    <tr>
+      <td><img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_dark_color_42x16dp.png" alt="Google"></td>
+      <td class="tos-right"><a href="https://www.google.com/">Google</a> <a href="https://www.google.com/intl/en/about/">About Google</a> <a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a> <a href="https://www.google.com/intl/en/policies/terms/">Terms</a></td>
+    </tr>
+  </table>
+</div>
